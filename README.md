@@ -4,13 +4,13 @@ La interfaz de usuario es el medio que permite la comunicación entre una person
 Dentro de los distintos tipos de interfaces, la Interfaz Gráfica de Usuario (GUI) representa una evolución significativa respecto a la interfaz de línea de comandos (CLI), ya que permite interactuar con el sistema mediante elementos visuales como ventanas, botones, íconos y cuadros de texto, eliminando la necesidad de introducir comandos escritos.
 La creación de una interfaz gráfica implica diseñar un entorno visual estructurado que permita al usuario comprender fácilmente las opciones disponibles y ejecutar acciones de forma intuitiva.
 
-Elementos que componen una GUI
+**Elementos que componen una GUI**
 
 Una interfaz gráfica está formada por diversos componentes visuales, entre los cuales se encuentran:
 Botones, Cuadros de texto, Listas desplegables, Grupos de selección, Contenedores, Ventanas, Panel etc.
 Estos elementos se organizan de manera jerárquica en pantalla, permitiendo que el usuario identifique claramente cada función del sistema.
 
-Principios en la creación de una interfaz gráfica
+**Principios en la creación de una interfaz gráfica**
 
 Para que una GUI sea efectiva, debe cumplir con ciertas características:
 Claridad: los elementos deben ser visibles y comprensibles.
@@ -19,7 +19,7 @@ Simplicidad: evitar saturación de información.
 Accesibilidad: permitir su uso a diferentes tipos de usuarios.
 El objetivo principal es facilitar la interaccion y mejorar la experiencia del usuario.
 
-Creación de Interfaces Gráficas mediante Flet
+**Creación de Interfaces Gráficas mediante Flet**
 
 En el desarrollo actual, frameworks como Flet permiten crear interfaces gráficas utilizando programación estructurada y componentes visuales denominados controles (controls). En los programas desarrollados como ejemplo práctico (un formulario de registro y dos calculadoras), se observa la construcción organizada de la interfaz mediante elementos visuales.
 
@@ -63,11 +63,10 @@ En el desarrollo de interfaces gráficas, los eventos son fundamentales, ya que 
 
 En Flet, los eventos funcionan mediante callbacks, es decir, funciones que se ejecutan automáticamente cuando ocurre una acción específica. Este modelo permite que la aplicación responda en tiempo real a la interacción del usuario.
 
- Eventos de Interacción con Widgets
+**Eventos de Interacción con Widgets**
 
 Son los eventos más comunes en aplicaciones gráficas, ya que se activan cuando el usuario interactúa directamente con un componente visual.
  Evento on_click
-
 
 Se activa cuando el usuario hace clic en un botón u otro control interactivo.
 
@@ -75,7 +74,7 @@ En los progrmas vistos en clase se utilizan:
 
 -Botones del formulario (por ejemplo, enviar datos).
 
--	Botones de las calculadoras (operaciones matemáticas).
+Botones de las calculadoras (operaciones matemáticas).
 
 -Botón “Send” en el chat.
 
@@ -89,12 +88,12 @@ Ejemplo :
 
 Aquí, send_click es la función que se ejecuta cuando el usuario presiona el botón, este tipo de evento pertenece a los eventos de acción directa.
 
-Evento on_change
+**Evento on_change**
 
 Se activa cuando el valor de un componente cambia.
 
 En tus programas aparece en:
-	-Campos de texto del formulario.
+-Campos de texto del formulario.
  
  -Dropdowns de selección.
 	
@@ -102,12 +101,12 @@ En tus programas aparece en:
 
 Por ejemplo, cuando el usuario escribe en un TextField, el sistema puede validar el contenido en tiempo real, este evento pertenece a los eventos de entrada de datos, ya que reaccionan a modificaciones en la información ingresada.
 
-Evento on_submit
+**Evento on_submit**
 
 Se activa cuando el usuario presiona la tecla Enter dentro de un campo de texto, es útil en formularios y aplicaciones como la calculadora o el chat, donde el usuario puede confirmar una entrada sin presionar un botón adicional.
 
 
-Eventos de Navegación y Diálogo
+**Eventos de Navegación y Diálogo**
 
 Estos eventos se relacionan con cambios en la estructura visual de la aplicación.
 
@@ -129,7 +128,7 @@ Aquí se combinan:
 
 Cuando el usuario presiona “Join chat”, se ejecuta la función join_click, lo que demuestra cómo un evento puede modificar el estado de la aplicación.
 
-Eventos de Comunicación Interna (PubSub)
+**Eventos de Comunicación Interna (PubSub)**
 
 En el programa del chat aparece un tipo de evento más avanzado:
 ```python
