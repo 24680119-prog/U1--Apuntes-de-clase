@@ -48,6 +48,9 @@ Los programas desarrollados cumplen con la definición de Interfaz Gráfica de U
 Presentan elementos visuales interactivos.
 
 -Permiten la comunicación directa entre usuario y sistema.
+
 -Están organizados estructuralmente.
+
 -No requieren el uso de comandos de texto.
+
 -Facilitan la ejecución de acciones mediante componentes gráficos.
