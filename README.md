@@ -154,12 +154,11 @@ En Flet, cada vez que un evento modifica un valor visual, se debe actualizar la 
 ```
 Esto garantiza que los cambios provocados por el evento se reflejen en pantalla.
 
-| Tipo de Evento              | Ejemplo en tus programas                     |
+| Tipo de Evento              | Ejemplo en programas                         |
 |-----------------------------|----------------------------------------------|
 | Evento de acción            | `on_click` en botones                        |
 | Evento de entrada           | `on_change` en TextField                     |
 | Evento de confirmación      | `on_submit`                                  |
-| Evento de validación        | Verificación de campos vacíos en formulario  |
 | Evento de comunicación      | `page.pubsub.subscribe()` en chat            |
 | Evento de actualización     | `page.update()`                              |
 
