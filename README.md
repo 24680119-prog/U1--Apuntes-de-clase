@@ -1,3 +1,6 @@
+## Unidad 1  Interfaz Gráfica de usuarios.
+En este trabajo se aborda el desarrollo de una interfaz gráfica utilizando Flet, un framework que permite crear aplicaciones interactivas en Python de manera estructurada y multiplataforma. A lo largo del desarrollo se explicó cómo se construye una interfaz gráfica, qué tipos de eventos permiten que el usuario interactúe con la aplicación y cómo se manejan dichos eventos mediante funciones que responden automáticamente a acciones como clics o cambios de texto.
+Asimismo, se analizaron los componentes gráficos de control utilizados en los programas desarrollados, como formularios, calculadoras y un sistema de chat , estos ejemplos permitieron comprender cómo se organizan los elementos visuales, cómo capturan información y cómo se conectan con la lógica del programa para generar aplicaciones dinámicas.
 ## Creación de Interfaz Gráfica para Usuarios
 
 La interfaz de usuario es el medio que permite la comunicación entre una persona y una máquina. Está compuesta por todos los elementos mediante los cuales el usuario puede interactuar con un sistema informático, facilitando la ejecución de acciones de manera eficaz, precisa y segura.
@@ -268,4 +271,110 @@ Cuando aparece un nuevo mensaje:
             )
 ```
 Aquí el evento se maneja mediante una función que escucha cambios y actualiza el contenido dinámicamente, este tipo de manejo demuestra un modelo más avanzado, donde los eventos no solo provienen de botones, sino de cambios en el estado de la aplicación.
+
+## Manejo de componentes graficos de control.
+
+Los componentes gráficos de control son los elementos visuales que permiten al usuario interactuar con una aplicación. Estos controles funcionan como intermediarios entre el usuario y el sistema, ya que capturan información, ejecutan acciones y muestran resultados.
+
+En el desarrollo de interfaces con Flet, los componentes gráficos se implementan mediante controles (controls), los cuales se organizan dentro de contenedores como Column y Row para estructurar la interfaz.
+
+
+
+**Componentes de Entrada de Datos**
+
+Son aquellos que permiten al usuario ingresar información.
+
+**TextField**
+
+Se utiliza para capturar texto ingresado por el usuario.
+
+En los programas aparece en : 
+
+-Formulario → captura nombre, datos personales.
+
+-Calculadora → ingreso de números.
+
+-Chat → escritura de mensajes.
+
+ejemplo : 
+
+```python
+    new_message = ft.TextField()
+```
+Este componente permite que el usuario introduzca información que luego será procesada por la aplicación.
+
+**Dropdown**
+
+Permite seleccionar una opción de una lista desplegable.
+
+En el formulario se utiliza para seleccionar opciones como carrera o categoría.
+
+```python
+    dd_carrera = ft.Dropdown(
+        label="Carrera *",
+```
+Este control facilita la selección estructurada de datos.
+
+**Componentes de Acción**
+
+
+Son controles que ejecutan una operación cuando el usuario interactúa con ellos.
+
+**Button**
+
+En los programas se utilizan botones para:
+
+-Enviar formulario.
+
+-Realizar operaciones matemáticas.
+
+-Enviar mensajes en el chat.
+
+-Ingresar al chat (“Join chat”).
+
+Ejemplo:
+
+```python
+ft.Button("Send", on_click=send_click)
+```
+Este componente conecta la interfaz con la lógica del programa.
+
+**Componentes de Organización**
+
+Estos controles estructuran visualmente la interfaz.
+
+**Column**
+
+Organiza los elementos de forma vertical.
+
+Ejemplo del chat:
+
+```python
+chat = ft.Column()
+```
+
+Aquí se almacenan los mensajes que se agregan dinámicamente.
+
+**Row**
+Organiza los elementos horizontalmente.
+
+Ejemplo:
+```python
+ft.Row([new_message, ft.Button("Send")])
+```
+
+**Componentes de Diálogo**
+
+En el programa del chat se utiliza:
+```python
+page.show_dialog(
+    ft.AlertDialog(
+        title=ft.Text("Welcome!"),
+        ...
+    )
+
+```
+Este componente muestra una ventana emergente para solicitar información antes de ingresar al chat.
+Los diálogos son importantes para controlar el flujo de interacción.
+
 
