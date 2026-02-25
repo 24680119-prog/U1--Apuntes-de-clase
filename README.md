@@ -163,5 +163,108 @@ Esto garantiza que los cambios provocados por el evento se reflejen en pantalla.
 | Evento de actualización     | `page.update()`                              |
 
 
+## Manejo de eventos 
 
+El manejo de eventos es el proceso mediante el cual una aplicación responde a las acciones del usuario dentro de una interfaz gráfica. En Flet, este proceso se realiza a través de funciones denominadas event handlers, las cuales se asignan a propiedades específicas de los controles, como on_click o on_change.
 
+Cuando ocurre un evento, el sistema ejecuta automáticamente la función asociada, permitiendo modificar valores, validar información o actualizar la interfaz.
+
+**Modelo de Manejo de Eventos en Flet**
+
+En Flet, los eventos se gestionan mediante un modelo basado en:
+
+-Definición de una función manejadora (event handler).
+
+-Asignación de esa función a un control.
+
+-Ejecución automática cuando ocurre el evento.
+
+-Actualización de la interfaz con page.update().
+
+Este proceso permite que la aplicación reaccione dinámicamente a la interacción del usuario.
+
+**Estructura general de un controlador de eventos**
+
+La estructura básica utilizada en los programas es:
+
+```python
+def nombre_funcion(e):
+    # lógica del evento
+    page.update()
+```
+
+Dónde:
+e : representa el objeto del evento.
+
+Dentro de la función se coloca la lógica que se desea ejecutar.
+
+page.update()Actualiza la interfaz para mostrar los cambios.
+
+**Manejo de Eventos en los Programas**
+
+a) Manejo del evento on_click(Botones)
+
+Ejemplo del programa de chat:
+
+```python
+def send_click(e):
+    page.pubsub.send_all(...)
+    new_message.value = ""
+    page.update()
+
+```
+Aquí el manejo del evento consiste en:
+
+1.-Capturar el clic del usuario.
+
+2.-Procesar el mensaje.
+
+3.-Limpiar el campo de texto.
+
+4.-Actualizar la interfaz.
+
+Esto demuestra que el evento no solo detecta la acción, sino que ejecuta lógica interna.
+
+b) Manejo de validaciones (Formulario)
+
+En el formulario, cuando el usuario presiona un botón:
+```python
+def join_click(e):
+    if not user_name.value:
+        user_name.error_text = "Name cannot be blank!"
+    else:
+        ...
+    page.update()
+
+```
+
+Aquí el manejo del evento incluye:
+
+1.-Validación de datos.
+
+2.-Asignación de mensajes de error.
+
+3.-Control del flujo del programa.
+
+4.-Actualización visual.
+
+Este es un ejemplo claro de cómo el manejo de eventos controla la lógica del sistema.
+
+c) Manejo de eventos en comunicación interna (Chat)
+En el programa de chat:
+```python
+    page.pubsub.subscribe(on_message)
+
+```
+
+Cuando aparece un nuevo mensaje:
+```python
+    def on_message(message: Message):
+        if message.message_type == "chat_message":
+            chat.controls.append(ft.Text(f"{message.user}: {message.text}"))
+        elif message.message_type == "login_message":
+            chat.controls.append(
+                ft.Text(message.text, italic=True, color=ft.Colors.BLACK_45, size=12)
+            )
+```
+Aquí el evento se maneja mediante una función que escucha cambios y actualiza el contenido dinámicamente, este tipo de manejo demuestra un modelo más avanzado, donde los eventos no solo provienen de botones, sino de cambios en el estado de la aplicación.
