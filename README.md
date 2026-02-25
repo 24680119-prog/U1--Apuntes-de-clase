@@ -268,3 +268,4 @@ Cuando aparece un nuevo mensaje:
             )
 ```
 Aquí el evento se maneja mediante una función que escucha cambios y actualiza el contenido dinámicamente, este tipo de manejo demuestra un modelo más avanzado, donde los eventos no solo provienen de botones, sino de cambios en el estado de la aplicación.
+
