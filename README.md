@@ -5,28 +5,12 @@ La creación de una interfaz gráfica implica diseñar un entorno visual estruct
 
 Elementos que componen una GUI
 Una interfaz gráfica está formada por diversos componentes visuales, entre los cuales se encuentran:
-	•	Botones
-	•	Cuadros de texto
-	•	Listas desplegables
-	•	Grupos de selección
-	•	Contenedores
-	•	Ventanas
-	•	Paneles
-	•	Barras de información
+Botones, Cuadros de texto, Listas desplegables, Grupos de selección, Contenedores, Ventanas, Panel etc.
 Estos elementos se organizan de manera jerárquica en pantalla, permitiendo que el usuario identifique claramente cada función del sistema.
 
 Principios en la creación de una interfaz gráfica
 Para que una GUI sea efectiva, debe cumplir con ciertas características:
-	•	Claridad: los elementos deben ser visibles y comprensibles.
-	•	Coherencia: el diseño debe mantener uniformidad visual.
-	•	Simplicidad: evitar saturación de información.
-	•	Accesibilidad: permitir su uso a diferentes tipos de usuarios.
-
-
-
-
-
-  
-	•	Organización estructural: distribuir adecuadamente los componentes.
-
-El objetivo principal es facilitar la interacción y mejorar la experiencia del usuario.
+Claridad: los elementos deben ser visibles y comprensibles.
+Coherencia: el diseño debe mantener uniformidad visual.
+Simplicidad: evitar saturación de información.
+Accesibilidad: permitir su uso a diferentes tipos de usuarios.
