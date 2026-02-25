@@ -55,3 +55,115 @@ Presentan elementos visuales interactivos.
 
 -Facilitan la ejecución de acciones mediante componentes gráficos.
 
+## Tipos de Eventos en una Interfaz Gráfica
+
+En el contexto de la programación, un evento es una acción o suceso que ocurre durante la ejecución de un programa y que permite que el sistema reaccione de manera interactiva. Estos eventos pueden ser generados por el usuario (clics, escritura de texto, selección de opciones) o por el propio sistema.
+
+En el desarrollo de interfaces gráficas, los eventos son fundamentales, ya que permiten transformar una interfaz estática en una aplicación dinámica e interactiva.
+
+En Flet, los eventos funcionan mediante callbacks, es decir, funciones que se ejecutan automáticamente cuando ocurre una acción específica. Este modelo permite que la aplicación responda en tiempo real a la interacción del usuario.
+
+ Eventos de Interacción con Widgets
+
+Son los eventos más comunes en aplicaciones gráficas, ya que se activan cuando el usuario interactúa directamente con un componente visual.
+ Evento on_click
+
+
+Se activa cuando el usuario hace clic en un botón u otro control interactivo.
+
+En los progrmas vistos en clase se utilizan:
+
+-Botones del formulario (por ejemplo, enviar datos).
+
+-	Botones de las calculadoras (operaciones matemáticas).
+
+-Botón “Send” en el chat.
+
+-Botón “Join chat” en el cuadro de diálogo.
+ 
+Ejemplo : 
+
+```python
+   page.add(chat, ft.Row([new_message, ft.Button("Send", on_click=send_click)]))
+```
+
+Aquí, send_click es la función que se ejecuta cuando el usuario presiona el botón, este tipo de evento pertenece a los eventos de acción directa.
+
+Evento on_change
+
+Se activa cuando el valor de un componente cambia.
+
+En tus programas aparece en:
+	-Campos de texto del formulario.
+ 
+ -Dropdowns de selección.
+	
+ -Campos numéricos en las calculadoras.
+
+Por ejemplo, cuando el usuario escribe en un TextField, el sistema puede validar el contenido en tiempo real, este evento pertenece a los eventos de entrada de datos, ya que reaccionan a modificaciones en la información ingresada.
+
+Evento on_submit
+
+Se activa cuando el usuario presiona la tecla Enter dentro de un campo de texto, es útil en formularios y aplicaciones como la calculadora o el chat, donde el usuario puede confirmar una entrada sin presionar un botón adicional.
+
+
+Eventos de Navegación y Diálogo
+
+Estos eventos se relacionan con cambios en la estructura visual de la aplicación.
+
+En el programa de chat se observa el uso de:
+
+```python
+    page.show_dialog(
+        ft.AlertDialog(
+        ...................
+            actions_alignment=ft.MainAxisAlignment.END,
+```
+Aquí se combinan:
+
+-Evento on_click
+	
+-Control de diálogo (AlertDialog)
+
+-Actualización de la página
+
+Cuando el usuario presiona “Join chat”, se ejecuta la función join_click, lo que demuestra cómo un evento puede modificar el estado de la aplicación.
+
+Eventos de Comunicación Interna (PubSub)
+
+En el programa del chat aparece un tipo de evento más avanzado:
+```python
+ page.pubsub.send_all(
+                Message(
+```
+Este mecanismo permite que la aplicación escuche mensajes enviados dentro del sistema.
+
+Cuando ocurre un nuevo mensaje:
+```python
+ page.pubsub.send_all(
+                Message(
+```
+Se activa automáticamente la función on_message.
+
+Este tipo de evento pertenece a los eventos de comunicación interna, ya que no depende directamente de un clic visible, sino del intercambio de información entre componentes.
+
+Actualización de la Interfaz como Respuesta a Eventos
+
+En Flet, cada vez que un evento modifica un valor visual, se debe actualizar la interfaz:
+```python
+        page.update()
+```
+Esto garantiza que los cambios provocados por el evento se reflejen en pantalla.
+
+| Tipo de Evento              | Ejemplo en tus programas                     |
+|-----------------------------|----------------------------------------------|
+| Evento de acción            | `on_click` en botones                        |
+| Evento de entrada           | `on_change` en TextField                     |
+| Evento de confirmación      | `on_submit`                                  |
+| Evento de validación        | Verificación de campos vacíos en formulario  |
+| Evento de comunicación      | `page.pubsub.subscribe()` en chat            |
+| Evento de actualización     | `page.update()`                              |
+
+
+
+
