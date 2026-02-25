@@ -54,3 +54,4 @@ Presentan elementos visuales interactivos.
 -No requieren el uso de comandos de texto.
 
 -Facilitan la ejecución de acciones mediante componentes gráficos.
+
