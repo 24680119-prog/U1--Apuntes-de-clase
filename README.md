@@ -377,4 +377,5 @@ page.show_dialog(
 Este componente muestra una ventana emergente para solicitar información antes de ingresar al chat.
 Los diálogos son importantes para controlar el flujo de interacción.
 
+## Bibliografías
 
