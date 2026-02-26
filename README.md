@@ -378,4 +378,13 @@ Este componente muestra una ventana emergente para solicitar información antes 
 Los diálogos son importantes para controlar el flujo de interacción.
 
 ## Bibliografías
+Admin. (2023, 23 junio). INTERFAZ DEL USUARIO: ¿QUE ES, UTILIDAD y PARA QUE SIRVE? Pinguino Digital. https://pinguinodigital.com/blog/interfaz-de-usuario/#Funciones_principales
+
+De Tuatara Agencia Boutique, F. G. C. (2025, 11 diciembre). Lo que debes saber sobre la Interfaz Gráfica (GUI). Tuatara Agencia Boutique. https://tuatara.co/blog/software/interfaz-grafica/
+
+García, I. J. B. (s. f.). ¿Qué es lo que define a una buena interfaz de usuario y cómo elegirla? https://www.servnet.mx/blog/que-es-lo-que-define-a-una-buena-interfaz-de-usuario-aqui-te-lo-decimos
+
+GUI: qué es una interfaz gráfica de usuario. (2021, 28 enero). IONOS Digital Guide. https://www.ionos.mx/digitalguide/paginas-web/desarrollo-web/que-es-una-gui/
+
+HostingPlus Mexico. (2021, 7 julio). Qué es una interfaz de usuario y cómo funciona | Blog | Hosting Plus Mexico. Hosting Plus. https://www.hostingplus.mx/blog/que-es-una-interfaz-de-usuario-y-como-funciona/
 
