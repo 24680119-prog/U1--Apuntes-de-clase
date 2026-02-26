@@ -1,4 +1,4 @@
-## Unidad 1  Interfaz Gráfica de usuarios.
+## Unidad 1  Interfaz Gráfica de usuarios
 En este trabajo se aborda el desarrollo de una interfaz gráfica utilizando Flet, un framework que permite crear aplicaciones interactivas en Python de manera estructurada y multiplataforma. A lo largo del desarrollo se explicó cómo se construye una interfaz gráfica, qué tipos de eventos permiten que el usuario interactúe con la aplicación y cómo se manejan dichos eventos mediante funciones que responden automáticamente a acciones como clics o cambios de texto.
 Asimismo, se analizaron los componentes gráficos de control utilizados en los programas desarrollados, como formularios, calculadoras y un sistema de chat , estos ejemplos permitieron comprender cómo se organizan los elementos visuales, cómo capturan información y cómo se conectan con la lógica del programa para generar aplicaciones dinámicas.
 ## Creación de Interfaz Gráfica para Usuarios
